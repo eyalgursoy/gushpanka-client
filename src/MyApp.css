@@ -1,0 +1,60 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 1em;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.grommetux-card__thumbnail {
+  background-size: contain !important;
+}
+
+
+.grommetux-box.skill-card .grommetux-anchor {
+    text-align: right;
+    background: aqua;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    align-self: flex-end;
+    margin-top: 10px;
+}
+
+.flex-row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.flex-row .flex-label {
+  text-align: left;
+  display: block;
+}
+.flex-row .flex-data {
+  text-align: right;
+  display: block;
+}
