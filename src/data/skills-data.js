@@ -5,7 +5,7 @@ const skilsData = [
         "thumbnail": "/images/bitcoin-whitepaer.jpg",
         "description": "Learn the basics of Bitcoin: A Peer-to-Peer Electronic Cash System",
         "link": "",
-        "marketSize": "100000",
+        "marketSize": "100000g",
         "price": "100g",
         "ratio": "50%",
     },
@@ -15,7 +15,7 @@ const skilsData = [
         "thumbnail": "/images/spacemesh-whitepaer.jpg",
         "description": "Learn about Spacemesh decentrelized network",
         "link": "",
-        "marketSize": "20000",
+        "marketSize": "20000g",
         "price": "100g",
         "ratio": "30%"
     },

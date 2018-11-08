@@ -30,6 +30,23 @@
   }
 }
 
+a.grommetux-anchor, 
+a.grommetux-anchor:link,
+a.grommetux-anchor:visited,
+a.grommetux-anchor:active {
+  color: #000;
+}
+
+@media screen and (min-width: 45em) {
+  .skill-card h2.grommetux-heading {
+    font-size: 1.7rem !important;
+  }
+
+  .skill-card .grommetux-paragraph--large{
+    font-size: 16px !important;
+  }
+}
+
 .grommetux-title {
   font-size: 2rem;
 }

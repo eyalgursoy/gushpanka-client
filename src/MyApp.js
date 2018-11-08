@@ -14,8 +14,10 @@ class MyApp extends Component {
       <div>
         <Header fixed={false}>
           <Title>
-            <span>Gushpanka</span>
-            <img src={gushpanka} className="App-logo" alt="logo" />
+            <Anchor href="/">
+              <img src={gushpanka} className="App-logo" alt="logo" />
+              <span>Gushpanka</span>
+            </Anchor>
           </Title>
           <Box flex={true}
               justify='end'
