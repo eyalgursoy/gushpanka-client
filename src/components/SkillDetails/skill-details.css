@@ -1,0 +1,22 @@
+.skill-details {
+
+}
+
+.skill-details__info {
+    display: flex;
+    flex-flow: nowrap column;
+}
+
+.skill-details__image {
+    margin-bottom: 35px;
+}
+.skill-details__content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.skill-details__button {
+    display: inline-block;
+    margin-top: 35px;
+    align-self: flex-end;
+}

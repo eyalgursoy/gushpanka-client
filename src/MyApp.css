@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 1em;
+  height: 2em;
 }
 
 .App-header {
@@ -28,6 +28,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.grommetux-title {
+  font-size: 2rem;
 }
 
 .grommetux-card__thumbnail {
@@ -57,4 +61,8 @@
 .flex-row .flex-data {
   text-align: right;
   display: block;
+}
+
+.market-place {
+  margin-top: 2em;
 }
