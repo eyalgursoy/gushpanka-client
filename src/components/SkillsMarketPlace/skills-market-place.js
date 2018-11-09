@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Anchor, Card, Section, Headline, Header, Search, Box  } from 'grommet';
+import { Anchor, Card, Section, Headline, Heading, Search, Box  } from 'grommet';
 import LinkNextIcon from 'grommet/components/icons/base/LinkNext';
 import skillsData from '../../data/skills-data';
 
@@ -24,14 +24,14 @@ class SkillsMarketPlace extends Component {
                 dropAlign={{"right": "right"}} 
             />  
 
-            <Header align="left" size="small">
+            <Heading align="left" size="small" tag="h3" className="instructions">
                 Pick your certificate
-            </Header>
+            </Heading>
             
             <Box className="market-place" direction="row" align="start">
-                { skills.map( ({ id, thumbnail, heading, description, link, marketSize, price, ratio  }) => (
+                { skills.map( ({ id, thumbnail, heading, description, link, marketSize, price, ratio, owned  }) => (
                     <Card 
-                        className="skill-card"
+                        className={`skill-card ${owned && "owned"}`}
                         thumbnail={thumbnail}
                         heading={heading}
                         description={description}

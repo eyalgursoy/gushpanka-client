@@ -37,10 +37,10 @@ class MyApp extends Component {
               justify='end'
               direction='row'
               responsive={false}>
-              <Menu responsive={true} direction="row">
-                <Anchor href='#'
-                  className='active'>{user && `${user.name}` }
-                  <UserSettingsIcon />
+              
+              <Menu responsive={true} label={user && `${user.assets}`} icon={ <UserSettingsIcon />}>
+                <Anchor href='#'>
+                  {user && `Hello ${user.name}`}
                 </Anchor>
               </Menu>
           </Box>

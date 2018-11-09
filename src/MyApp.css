@@ -21,6 +21,7 @@
   color: #61dafb;
 }
 
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -38,6 +39,23 @@ a.grommetux-anchor:active {
 }
 
 @media screen and (min-width: 45em) {
+
+  .skill-card.owned {
+    position: relative;
+  }
+
+  .skill-card.owned:after {
+    content: "";
+    width: 5rem;
+    height: 5rem;
+    background: url('./images/gushpanka-logo.png') no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    display: block;
+    top: -25px;
+    left: -15px;
+  }
+
   .skill-card h2.grommetux-heading {
     font-size: 1.7rem !important;
   }
@@ -81,5 +99,9 @@ a.grommetux-anchor:active {
 }
 
 .market-place {
+  margin-top: 2em;
+}
+
+.instructions {
   margin-top: 2em;
 }

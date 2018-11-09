@@ -23,7 +23,6 @@ class SkillDetails extends Component {
 
     onAqcuireNewSkill(event) {
         this.setState({confirmOpen: true});
-        // alert("Are you sure?");
     }
 
     render() {
