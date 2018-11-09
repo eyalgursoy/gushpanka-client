@@ -4,7 +4,7 @@ const skilsData = [
         "heading": "Satoshi White Paper",
         "thumbnail": "/images/bitcoin-123123123.jpg",
         "description": "Learn the basics of Bitcoin: A Peer-to-Peer Electronic Cash System",
-        "link": "",
+        "link": "https://goo.gl/forms/lrxzNbid4qlr5nM42",
         "marketSize": "100000g",
         "price": "100g",
         "ratio": "50%",
@@ -15,7 +15,7 @@ const skilsData = [
         "heading": "Spacemesh White Paper",
         "thumbnail": "/images/Spacemesh-1525686830.jpg",
         "description": "Learn about Spacemesh decentrelized network",
-        "link": "",
+        "link": "https://goo.gl/forms/jzzyyDCPw7Dlqfge2",
         "marketSize": "20000g",
         "price": "100g",
         "ratio": "30%"

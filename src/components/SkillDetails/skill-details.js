@@ -25,6 +25,11 @@ class SkillDetails extends Component {
         this.setState({confirmOpen: true});
     }
 
+    onSendFunds(link) {
+        this.setState({confirmOpen:false});
+        window.location.href=link;
+    }
+
     render() {
         const { skill, confirmOpen, amount } = this.state;
 
@@ -61,7 +66,7 @@ class SkillDetails extends Component {
                         <div className="confirmation__title">Your're going to send {amount}g</div>
                         <div className="confirmation__actions">
                             <Button onClick={() => { this.setState({confirmOpen:false})}}>Cancel</Button>
-                            <Button primary onClick={() => { this.setState({confirmOpen:false})}}>Continue</Button>
+                            <Button primary onClick={() => { this.onSendFunds(link) }}>Continue</Button>
                         </div>
                     </Box>
                 </Layer>
