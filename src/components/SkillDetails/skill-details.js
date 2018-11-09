@@ -52,7 +52,9 @@ class SkillDetails extends Component {
             <Box className="skill-details__content">
                 <Image src={thumbnail} alt={description} className="skill-details__image"  />
                 <div className="skill-details__info">
-                    <Headline className="skill-details__headline" align="center" size="small">{heading}</Headline>
+                    <Heading className="skill-details__headline" align="center" size="medium" tag="h2">{heading}</Heading>
+                    <Heading className="skill-details__description" align="left" size="small" tag="h4">{description}</Heading>
+                    
                     <div className="flex-row"><label className="flex-label">Volume:</label><span className="flex-data">{marketSize}</span></div>
                     <div className="flex-row"><label className="flex-label">Price:</label><span className="flex-data">{price}</span></div>
                     <div className="flex-row"><label className="flex-label">% Ratio:</label><span className="flex-data">{ratio}</span></div>
