@@ -38,7 +38,7 @@ class MyApp extends Component {
               direction='row'
               responsive={false}>
               
-              <Menu responsive={true} label={user && `${user.assets}`} icon={ <UserSettingsIcon />}>
+              <Menu className="user-menu" responsive={true} label={user && `${user.assets}`} icon={ <UserSettingsIcon />}>
                 <Anchor href='#'>
                   {user && `Hello ${user.name}`}
                 </Anchor>

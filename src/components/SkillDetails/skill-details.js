@@ -26,8 +26,16 @@ class SkillDetails extends Component {
     }
 
     onSendFunds(link) {
-        this.setState({confirmOpen:false});
-        window.location.href=link;
+        this.setState({
+            confirmOpen:false,
+        });
+        window.open(link, '_blank');
+
+        const userMenu = document.getElementsByClassName("user-menu");
+        const userLabel = userMenu && userMenu[0].firstChild && userMenu[0].firstChild.firstChild;
+        if (userLabel) {
+            userLabel.innerText = '0g';
+        }
     }
 
     render() {
