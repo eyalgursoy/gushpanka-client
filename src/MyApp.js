@@ -7,9 +7,23 @@ import UserSettingsIcon from 'grommet/components/icons/base/UserSettings';
 import SkillsMarketPlace from './components/SkillsMarketPlace';
 import SkillDetails from './components/SkillDetails';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import usersData from './data/user-data';
 
 class MyApp extends Component {
+  state = {
+    user: null,
+  }
+
+  componentWillMount(){
+    const user = usersData[0];
+    this.setState({
+      user,
+    })
+  }
+
   render() {
+    const { user } = this.state;
+
     return (
       <div>
         <Header fixed={false}>
@@ -25,7 +39,7 @@ class MyApp extends Component {
               responsive={false}>
               <Menu responsive={true} direction="row">
                 <Anchor href='#'
-                  className='active'>
+                  className='active'>{user && `${user.name}` }
                   <UserSettingsIcon />
                 </Anchor>
               </Menu>
