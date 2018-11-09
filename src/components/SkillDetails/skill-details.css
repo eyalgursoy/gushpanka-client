@@ -20,3 +20,20 @@
     margin-top: 35px;
     align-self: flex-end;
 }
+
+.confirmation .grommetux-layer__container {
+    padding: 2rem 3rem 1rem 3rem;
+    min-width: 340px;
+}
+.confirmation__title {
+    margin: 10px auto;
+}
+.confirmation__actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.confirmation__actions button {
+    display: inline-block;
+}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Anchor, Card, Section, Headline, Search, Box  } from 'grommet';
+import { Anchor, Card, Section, Headline, Header, Search, Box  } from 'grommet';
 import LinkNextIcon from 'grommet/components/icons/base/LinkNext';
 import skillsData from '../../data/skills-data';
 
@@ -14,7 +14,7 @@ class SkillsMarketPlace extends Component {
         return (
         <Section>
             <Headline align="center" size="small">
-                Market Place - Aquire new Skills
+                Market Place - Acquire new Skills
             </Headline>
             <Search 
                 inline={true}
@@ -23,6 +23,11 @@ class SkillsMarketPlace extends Component {
                 placeHolder='Search'
                 dropAlign={{"right": "right"}} 
             />  
+
+            <Header align="left" size="small">
+                Pick your certificate
+            </Header>
+            
             <Box className="market-place" direction="row" align="start">
                 { skills.map( ({ id, thumbnail, heading, description, link, marketSize, price, ratio  }) => (
                     <Card 
@@ -32,7 +37,7 @@ class SkillsMarketPlace extends Component {
                         description={description}
                         link={<Anchor href={`/skill-details/${id}`}><LinkNextIcon /></Anchor>}
                     >
-                        <div className="flex-row"><label className="flex-label">Market Size:</label><span className="flex-data">{marketSize}</span></div>
+                        <div className="flex-row"><label className="flex-label">Volume:</label><span className="flex-data">{marketSize}</span></div>
                         <div className="flex-row"><label className="flex-label">Price:</label><span className="flex-data">{price}</span></div>
                         <div className="flex-row"><label className="flex-label">% Ratio:</label><span className="flex-data">{ratio}</span></div>
                     </Card>

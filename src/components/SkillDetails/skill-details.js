@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
-import { Image, Button, Section, Headline, Box  } from 'grommet';
+import { Image, Button, Section, Headline, Box, Layer, Heading } from 'grommet';
 import skillsData from '../../data/skills-data';
 import LinkNextIcon from 'grommet/components/icons/base/LinkNext';
 
 import './skill-details.css';
 
+
 class SkillDetails extends Component {
+    state = {
+        skill: null,
+        confirmOpen: false,
+        amount: 100,
+    }
+
     componentWillMount () {
         const { match } = this.props;
         const { skillId } = match.params;
@@ -14,8 +21,13 @@ class SkillDetails extends Component {
         this.setState({ skill });
     }
 
+    onAqcuireNewSkill(event) {
+        this.setState({confirmOpen: true});
+        // alert("Are you sure?");
+    }
+
     render() {
-        const { skill } = this.state;
+        const { skill, confirmOpen, amount } = this.state;
 
         if (!skill) { 
             return null;
@@ -29,18 +41,32 @@ class SkillDetails extends Component {
                 <Image src={thumbnail} alt={description} className="skill-details__image"  />
                 <div className="skill-details__info">
                     <Headline className="skill-details__headline" align="center" size="small">{heading}</Headline>
-                    <div className="flex-row"><label className="flex-label">Market Size:</label><span className="flex-data">{marketSize}</span></div>
+                    <div className="flex-row"><label className="flex-label">Volume:</label><span className="flex-data">{marketSize}</span></div>
                     <div className="flex-row"><label className="flex-label">Price:</label><span className="flex-data">{price}</span></div>
                     <div className="flex-row"><label className="flex-label">% Ratio:</label><span className="flex-data">{ratio}</span></div>
                     <Button 
                         href="#" 
                         className="skill-details__button"
                         icon={<LinkNextIcon />}
-                        onClick={() => undefined} 
+                        onClick={() => {
+                            this.onAqcuireNewSkill();
+                        }} 
                         label="Acquire Skill" 
                     />
                 </div>
             </Box>
+            { confirmOpen && (
+                <Layer align="center" className="confirmation" closer onClose={() => { this.setState({confirmOpen:false})}}>
+                    <Heading tag="h3" strong={false} align="center">Acquire New Skill</Heading>
+                    <Box a11yTitle="" align="center">
+                        <div className="confirmation__title">Your're going to send {amount}g</div>
+                        <div className="confirmation__actions">
+                            <Button onClick={() => { this.setState({confirmOpen:false})}}>Cancel</Button>
+                            <Button primary onClick={() => { this.setState({confirmOpen:false})}}>Continue</Button>
+                        </div>
+                    </Box>
+                </Layer>
+            )}
          </Section>
       );
     }
